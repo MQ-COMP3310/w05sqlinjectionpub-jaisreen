@@ -79,9 +79,6 @@ public class SQLiteConnectionManager {
         }
     }
 
-    /**
-     * ✅ Uses parameterized query to prevent SQL injection
-     */
     public void addValidWord(int id, String word) {
         String sql = "INSERT INTO validWords(id, word) VALUES(?, ?)";
 
@@ -95,9 +92,6 @@ public class SQLiteConnectionManager {
         }
     }
 
-    /**
-     * ✅ Uses parameterized query to prevent SQL injection
-     */
     public boolean isValidWord(String guess) {
         String sql = "SELECT count(id) as total FROM validWords WHERE word = ?";
 
